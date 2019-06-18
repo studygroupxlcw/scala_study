@@ -28,7 +28,7 @@ object TestSet {
     //将可变set转换成不可变set
     val another = mutableSet.toSet
     println(another.getClass.getName)
-    //对不可变集合做删除1个元素的操作
+    //对不可变集合做删除1个元素的操作，生成了一个新的集合，原来的集合没有变
     println("对不可变集合做删掉元素1操作=" + another.drop(1))
     //重新打印不可变集合
     println("another=" + another)
