@@ -1,11 +1,15 @@
 package study.cc.scala.function
 
 object TestFunctionSuper {
+  // 概念说明
+  // 传名调用：将为计算的参数表达式直接应用到函数内部，用=>来设置传名调用
+  // 传值调用：先计算参数表达式的值，再应用到函数内部，把=>去掉即可，即按原始的方式
+  // 延迟计算，调用了才计算方法，加了=>就是传名，去掉了就是正常调用方式
 
   def main(args: Array[String]): Unit = {
-//    delayedCalculator(transmitMe())
-//    printBabyNames(name2 = "2", name1 = "1")
-    printAllParasValue("a","b")
+    delayedCalculator(transmitMe())
+    printBabyNames(name2 = "2", name1 = "1")
+    printAllParasValue("a", "b")
   }
 
   def transmitMe(): String = {
@@ -19,12 +23,12 @@ object TestFunctionSuper {
     println("在delayedCalculator方法结束----")
   }
 
-  def printBabyNames(name1: String, name2: String):Unit = {
+  def printBabyNames(name1: String, name2: String): Unit = {
     println(name1 + " " + name2)
   }
 
-  def printAllParasValue(paras: String*):Unit = {
-    for(tmp <- paras) {
+  def printAllParasValue(paras: String*): Unit = {
+    for (tmp <- paras) {
       println(tmp)
     }
   }
