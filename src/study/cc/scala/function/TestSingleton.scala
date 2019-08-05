@@ -14,6 +14,17 @@ class TaskManager private(oneName: String) {
   }
 }
 
+//class Test {
+//  private String name;
+//  private Test(String oneName) {
+//    name = oneName;
+//  }
+//
+//  public String getName() {
+//    retrun name;
+//  }
+//}
+
 /**
   * 定义伴生对象
   */
@@ -31,7 +42,11 @@ object TaskManager {
 object TestSingleton {
   def main(args: Array[String]): Unit = {
     var singleton = TaskManager.getSingletonInstance()
+    var singleton2 = TaskManager.getSingletonInstance()
     println(singleton.getName())
+    println(singleton.hashCode())
+    println(singleton2.hashCode())
+
   }
 }
 

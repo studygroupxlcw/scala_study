@@ -1,6 +1,7 @@
 package study.cc.scala.function
 
 object FunctionTest {
+
   def functionName(arg: String): String = {
     println(arg)
     "Hello"

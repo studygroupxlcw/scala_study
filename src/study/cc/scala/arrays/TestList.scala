@@ -30,6 +30,14 @@ object TestList {
       (0 :: (1 :: (0 :: Nil))) ::
       (0 :: (0 :: (1 :: Nil))) :: Nil
 
+
+    println("==============")
+    for(one <- dim) {
+      for(a <- one) {
+        println(a)
+      }
+    }
+
     println(language.head) // 获取第一个元素
     println(language.tail) // 获取除第一个元素外的所有元素
     println("----------------------分割线---------------------")
@@ -46,12 +54,12 @@ object TestList {
     //
     // 两个列表连接操作
     //
-    val site1 = "Runoob" :: ("Google" :: ("Baidu" :: Nil))
-    val site2 = "Facebook" :: ("Taobao" :: Nil)
+    val site1 = "Runoob" :: "Google" :: "Baidu" :: Nil
+    val site2 = "Facebook" :: "Taobao" :: Nil
     // 使用 ::: 运算符
     var fruit = site1 ::: site2
     println("site1 ::: site2 : " + fruit)
-    // 使用 List.:::() 方法
+    // 使用 List.:::() 方法，site2顺序在前
     fruit = site1.:::(site2)
     println("site1.:::(site2) : " + fruit)
     // 使用 concat 方法
@@ -68,9 +76,15 @@ object TestList {
 
     println("----------------------分割线---------------------")
     // 从左向右丢弃元素，直到条件p不成立,一旦成立就退出
-    val test3 = List("test1", "test2", "test3")
+    val test3 = List("test1", "test1", "test3")
     val test4 = test3.dropWhile(p => p.equals("test1"))
     println(test4)
+
+    val test5 = List("2","2","4","2")
+    val test6 = test5.dropWhile(p => p.equals("2"))
+
+    println(test6)
+
 
   }
 }

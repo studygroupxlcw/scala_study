@@ -1,8 +1,13 @@
 package study.cc.scala.function
 
 object TestSwitchCase {
+
   def main(args: Array[String]): Unit = {
-    println(selfMatch("javase"))
+
+    println(selfMatch(60))
+
+    println(selfMatchObj(new TestPatternMatch))
+    println(selfMatchObj("aaa"))
   }
 
   def selfMatch(x: String): String = x match {
@@ -11,7 +16,7 @@ object TestSwitchCase {
       if (i > 3) {
         "Java开发标准版"
       } else {
-        "Java开发标准版"
+        "Java开发标准版 < 3"
       }
     }
     case "javaee" => "Java开发企业版"

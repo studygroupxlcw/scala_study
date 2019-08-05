@@ -16,5 +16,7 @@ object TestOption {
 
     println(javaDesc.getOrElse("没有拿到Java的信息"))
     println(phpDesc.getOrElse("没有拿到Php的信息"))
+
+    println(mainLanguageMap.get("javaa").getOrElse("没有获得"))
   }
 }

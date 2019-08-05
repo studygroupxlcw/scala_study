@@ -16,16 +16,19 @@ object TestIterator {
       println(it1.next())
     }
 
+    println("----------")
     /**
       * 迭代器求集合最大值
       */
     println(it2.max)
 
+    println("----------")
     /**
       * 迭代器集合的最小值
       */
     println(it3.min)
 
+    println("----------")
     /**
       * 迭代器长度
       */

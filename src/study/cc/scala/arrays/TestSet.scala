@@ -15,7 +15,7 @@ object TestSet {
     //    println(set.drop(1))
     //    // 再次打印之前的集合
     //    println(set)
-    val mutableSet = Set(1, 2, 3, 4, 5, 6)
+    val mutableSet = Set(2, 1, 3, 4, 5, 6)
     mutableSet.add(4)
     // 删除元素1
     mutableSet.remove(1)
@@ -27,6 +27,8 @@ object TestSet {
 
     //将可变set转换成不可变set
     val another = mutableSet.toSet
+    println("-----------")
+    println(another)
     println(another.getClass.getName)
     //对不可变集合做删除1个元素的操作，生成了一个新的集合，原来的集合没有变
     println("对不可变集合做删掉元素1操作=" + another.drop(1))

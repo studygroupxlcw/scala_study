@@ -10,6 +10,7 @@ object TestFunctionSuper {
     delayedCalculator(transmitMe())
     printBabyNames(name2 = "2", name1 = "1")
     printAllParasValue("a", "b")
+    defaultMethod(unit =2,a = 1)
   }
 
   def transmitMe(): String = {
